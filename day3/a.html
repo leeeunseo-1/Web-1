@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a태그</title>
+    <style>
+        #section1 {
+            background-color: greenyellow;
+            height: 1000px;
+            margin-bottom: 100px;
+        }
+
+        #section2 {
+            background-color: palevioletred;
+            height: 1000px;
+            margin-bottom: 100px;
+        }
+
+        section > a {
+            color: black;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        /* section 안에 있는 a에 대한 style을 부과함 */
+
+    </style>
+</head>
+<body>
+    <a href="/day1/plogin.html"></a>
+    <!-- 모든 파일에 대한 접근 권한이 생김 -->
+    <a href="./a.html"></a> 
+    <!-- 현재 작업하고 있는 폴더 안에서의 다른 파일들 선택 가능 -->
+    <a href="../day1/"></a>
+    <!-- 현재 작업하는 폴더뿐 아니라 그 외 상위 폴더들도 선택 가능 -->
+
+    <section id="section1">
+        <a href="#section2">이곳은 섹션 1이고 클릭하면 섹션 2로 넘어갑니다.</a>
+    </section>
+   
+    <section id="section2">
+        <a href="#section1">이곳은 섹션 2이고 클릭하면 섹션 2로 넘어갑니다.</a>
+    </section>
+
+    <a href="mailto:vdldmstj0909@naver.com">메일을 보내주세요</a>
+    <br>
+    <a href="tel:01052179744">모바일로 전화를 걸어주세요</a>
+    <br>
+    <a href="./질문.hwp" download="질문지">질문지 다운로드</a>
+    <!-- 포트폴리오나 실무에서 기획서 등을 다운로드 받을 때에 사용-->
+    <br>
+    <a href="https://www.naver.com/" target="_blank">네이버 바로 가기</a>
+</body>
+</html>
