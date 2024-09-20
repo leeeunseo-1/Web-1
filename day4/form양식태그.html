@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 양식 태그</title>
+</head>
+
+<body>
+    <form action="" method="" autocomplete="" name="signup">
+        <div>
+            <input type="checkbox" value="고양이">고양이
+            <input type="checkbox" value="강이지">강아지
+            <input type="checkbox" value="송아지">송아지
+            <!-- value 값이 벡엔드 서버에 체크 박스의 명을 알려줌
+                여러가지를 선택할 수 있게 할 때 사용 (복수 선택 O) -->
+        </div>
+        <div>
+            <input type="radio" value="여성" name="성별">여성
+            <input type="radio" value="남성" name="성별">남성
+            <!-- name 속성은 그룹화를 해주며, 한 그룹에서는 사용자가 하나만 고를 수 있음
+                (같은 name 안에서는 복수 선택 X) -->
+        </div>
+        <div>
+            이름 : <input type="text" name="username" maxlength="5" minlehth="1" autofocus="false">
+            읽기 전용 : <input type="text" readonly>
+            <!-- name을 항상 지정해주는 것이 좋음 
+            autofocus : true, false 값만 가지는 속성-->
+        </div>
+        <div>
+            비밀번호 : <input type="password" name="비밀번호">
+        </div>
+        <div>
+            <input type="number" name="number" required>
+            <!-- required : 필수 입력 요소 (자기소개서의 이름과 번호 등등 필수 표시됀 부분을 설정해줄 수 있음) -->
+        </div>
+        <div>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <input type="submit" name="submit" disabled>
+            <!-- disabled : 브라우저에서 아예 안 보이지 않고 투명하게 보이며 선택할 수 없는 상태
+            조건에 따라 사용 가능 여부를 제어할 수 있음
+            (필수 동의창 동의 시 회원가입 가능에서 회원가입 제출 버튼 등 ) -->
+        </div>
+        <div>
+            <input type="tel" placeholder="전화번호">
+            <!-- paceholder : 박스 안에 적힌 것이 없을 때마다 보이는 텍스트 설정 -->
+        </div>
+        <div>
+            <input type="date" name="date YYMMDD">
+        </div>
+        <div>
+            <input type="button" name="button">
+        </div>
+    </form>
+    <!-- action="" - 이 부분은 전용 서버가 구축되어 있을 때 사용할 수 있는 속성,
+        벡엔드 개발자에게 주소 받아서 써야 하는 부분 
+    name - 회원가입에 대한 폼 태그임을 고해줌 -->
+</body>
+
+</html>
