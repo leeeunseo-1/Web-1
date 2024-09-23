@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="KO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid magenta;
+        }
+
+        .ma_50 {
+            margin-top: 50px;
+        }
+        td {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>표의 제목</caption>
+        <tr>
+            <th>제목셀 1</th>
+            <th>제목셀 2</th>
+        </tr>
+        <tr>
+            <td>내용셀 1</td>
+            <td>내용셀 2</td>
+        </tr>
+    </table>
+
+    <table class="ma_50">
+        <caption>웹 커리큘럼</caption>
+        <tr>
+            <th>웹 과정 순서</th>
+            <th>학습 언어</th>
+            <th>학습 기간</th>
+        </tr>
+        <tr>
+            <td>웹1</td>
+            <td>HTML</td>
+            <td>한 달</td>
+        </tr>
+        <tr>
+            <td>웹2</td>
+            <td>CSS</td>
+            <td>한 달</td>
+        </tr>
+        <tr>
+            <td>웹3</td>
+            <td>java script</td>
+            <td>한 달</td>
+        </tr>
+        <tr>
+            <td>웹4</td>
+            <td>실전 웹 구축</td>
+            <td>한 달</td>
+        </tr>
+        <tr>
+            <td>UX/UI 디자인</td>
+            <td>Figma</td>
+            <td>한 달</td>
+        </tr>
+    </table>
+
+    <table class="ma_50">
+        <caption>병원</caption>
+        <tr>
+            <th colspan="3">환자 리스트</th>
+        </tr>
+        <tr>
+            <td>강호동</td>
+            <td>허리</td>
+            <td>침 치료</td>
+        </tr>
+        <tr>
+            <td>이수근</td>
+            <td>두통</td>
+            <td>약 처방</td>
+        </tr>
+        <tr>
+            <td>나pd</td>
+            <td>손목</td>
+            <td>물리치료</td>
+        </tr>
+    </table>
+</body>
+
+<table class="ma_50">
+    <caption>해외</caption>
+    <tr>
+        <th colspan="2">여행지 리스트</th>
+    </tr>
+    <tr>
+        <td rowspan="2">더운 나라</td>
+        <td>필리핀</td>
+    </tr>
+    <tr>
+        <td>사이판</td>
+    </tr>
+    <tr>
+        <td rowspan="2">추운 나라</td>
+        <td>필란드</td>
+    </tr>
+    <tr>
+        <td>러시아</td>
+    </tr>
+</table>
+
+</html>
+
+<!-- 
+tr = table row = 표의 행
+th = table head = 표의 머릿글
+td = table data = 표의 기본셀
+
+colspan - 칼럼을 합침(의미) = 행의 범위가 늘어남(결과)
+rowspan - 행을 합침(의미) = 칼럼의 범위가 늘어남(결과)
+-->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필드 그룹 만들기</title>
+</head>
+<body>
+    <form action="">
+        <fieldset disabled name="user">
+            <legend>회원정보</legend>
+            <label for="name">이름 : </label>
+            <input type="text" id="name">
+            <br>
+            <label for="tel">전화번호 : </label>
+            <input type="number" id="tel">
+            <br>
+        </fieldset>
+        <!-- disabled, name등의 속성을 줄 때 (묶은 뒤에 legend 태그로 제목 주기 등)
+            각각의 input에 속성을 넣지 않고 묶음으로 관리할 수 있음 -->
+    </form>
+</body>
+</html>

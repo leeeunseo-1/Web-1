@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력값 태그 2</title>
+</head>
+
+<body>
+    <form action="/submit">
+        <!-- 현재 제출할 서버가 없기 때문에 예시로 넣어놓음 
+        ' Cannot GET / submit '이라고 뜸 -->
+        <input type="text" placeholder="이름">
+        <input type="password">
+        <button type="reset">초기화</button>
+        <button type="submit">제출</button>
+    </form>
+    <hr>
+    <label for="nametext">이름 : </label>
+    <input type="text" id="nametext">
+    <!-- ( label을 걸은 텍스트 + input 텍스트창 ) 둘 다 같은 의미임을 스크린 리더기를 통해서도 인식이 가능함.
+    또한 label 텍스트를 눌러도 input 텍스트에 커서가 깜빡이며 입력 준비가 됌 -->
+    <hr>
+    <label> 이름 : 
+        <input type="text">
+    </label>
+    <!-- label 태그 안에 input 태그를 넣어도 됌 -->
+</body>
+
+</html>
