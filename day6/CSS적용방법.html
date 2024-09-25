@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 적용 방법</title>
+    <link rel="stylesheet" href="./example.css">
+    <!-- head 태그 안에 외부 스타일 시트 적용하여 마무리-->
+
+    <style>
+        .hello {
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>스타일 속성 실습</h1>
+    <p style="color: aqua;">인라인 스타일</p>
+    <!-- 
+    직접적으로 개개인에 style 속성을 넣어줌 
+    재사용이 불가능하다.
+    인라인 방식으로 스타일을 작성하면 재사용해야 하는 부분도 하나하나 다 다시 작성해야 하는 불편함
+    일반적인 웹을 구현하는 방법에서는 가장 기피하는 방식 (외부 스타일 시트의 장점과 대비되는 단점이다.)
+    -->
+
+
+    <p class="out_style_sheet">외부 스타일 시트</p>
+    <!--
+    html 파일의 class 속성값 = css파일의 .속성값
+    가장 많이 사용하고 유용한 형태
+    HTML과 CSS를 완전히 분리한 형태로 재사용이 용이하다.
+    일관된 디자인을 주로 하는 웹디자인 특성상 재사용이 용이하다는 것은 굉장히 큰 장점이다.
+    -->
+
+    <p class="hello">내부 스타일 시트</p>
+    <!--
+    class, id 그리고 style에서의 언급
+    외부스타일시트 방법보다 재사용이 떨어짐
+    html 문서 내에 css가 들어가는 방식으로 다양한 예제 파일을 많이 만들어야하는 수업 특성상 우리는 내부스타일시트를 이용할 예정
+    실제 작업은 외부 스타일 시트로 해야 합니다.
+    -->
+</body>
+
+</html>
+
+<!-- 언더바 _ 로 작성해야 하나로 이어지는 값이 됌 -->

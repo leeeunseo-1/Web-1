@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /* * {
+            color: blue;
+        } */
+
+        h1 {
+            color: yellow;
+        }
+
+        #id_section {
+            background-color: aqua;
+        }
+
+        .class_section {
+            background-color: blueviolet;
+        }
+
+        .web_level>li {
+            color: brown;
+        }
+
+        /* 자식 선택자. */
+        .web_level>li>a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        /* 자손 선택자. 단계별로 '>' 통해서 들어가서 지정한다 */
+
+        .web_class_level a {
+            text-decoration: none;
+            background-color: red;
+            color: black;
+        }
+
+        /* 후손 선택자. 한 칸 '띄워쓰기'. 즉시 선택 가능, 전체 구성에서 선택 시 유용 */
+
+        .front_end_lag~li {
+            background-color: burlywood;
+        }
+
+        /* 형제 선택자. 선택자 뒤의 '~' 후의 형제인 li들에 효과를 적용한다, 추가 변수 방지에 용이하다*/
+
+        .china_food+li {
+            background-color: red;
+        }
+
+        /* 인접 형제 선택자. '+' 급접해있는 것만 선택한다.*/
+
+        .p_tag, h3, #span_id {
+            background-color: blue;
+        }
+        /* 그룹 선택자. class, id, 기본 속성 등 여러 종류들을 '콤마 띄워쓰기' 로 묶었다. */
+    </style>
+</head>
+
+<body>
+    <h1>CSS 선택자</h1>
+    <hr>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo et non maiores pariatur totam molestias
+        nostrum illum molestiae minima dolores, quia vitae nulla accusantium iusto officia commodi, optio consequuntur.
+        <hr>
+    </p>
+
+    <section id="id_section">
+        <h2>아이디 선택자</h2>
+    </section>
+
+    <section class="class_section">
+        <h2>클래스 선택자</h2>
+    </section>
+
+    <ul class="web_level">
+        <li>
+            <a href="#">
+                웹1
+            </a>
+        </li>
+        <li>웹2</li>
+        <li>웹3</li>
+    </ul>
+
+    <ul class="web_class_name">
+        <li>
+            <a href="">
+                웹1
+            </a>
+        </li>
+        <li>
+            <a href="">
+                웹2
+            </a>
+        </li>
+        <li>
+            <a href="">
+                웹3
+            </a>
+        </li>
+    </ul>
+
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li class="front_end_lag">javascript</li>
+        <li>react</li>
+        <li>vue</li>
+    </ul>
+
+    <ul>
+        <li class="china_food">짜장면</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li>군만두</li>
+        <li>유산슬</li>
+    </ul>
+
+    <div>
+        <p class="p_tag">p 태그</p>
+        <h3>h3 태그</h3>
+        <span id="span_id">sapn 태그</span>
+    </div>
+</body>
+
+</html>
+
+
+<!--
+    선택자 : 문서 내 모든 것 선택 가능
+    이 외에도 선택자는 매우 많다.
+ -->
