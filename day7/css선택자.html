@@ -9,6 +9,8 @@
         /* * {
             color: blue;
         } */
+         /* 전체 선택하여 블루 컬러를 넣은 것을 다른 선택자 실습을 위하여 주석 처리한 것이다. 
+         css의 주석은 직접 기입하여야 한다. */
 
         h1 {
             color: yellow;
@@ -25,13 +27,12 @@
         .web_level>li {
             color: brown;
         }
-
         /* 자식 선택자. */
+
         .web_level>li>a {
             text-decoration: none;
             color: blue;
         }
-
         /* 자손 선택자. 단계별로 '>' 통해서 들어가서 지정한다 */
 
         .web_class_level a {
@@ -39,7 +40,6 @@
             background-color: red;
             color: black;
         }
-
         /* 후손 선택자. 한 칸 '띄워쓰기'. 즉시 선택 가능, 전체 구성에서 선택 시 유용 */
 
         .front_end_lag~li {
@@ -63,11 +63,9 @@
 
 <body>
     <h1>CSS 선택자</h1>
-    <hr>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quo et non maiores pariatur totam molestias
         nostrum illum molestiae minima dolores, quia vitae nulla accusantium iusto officia commodi, optio consequuntur.
-        <hr>
     </p>
 
     <section id="id_section">
