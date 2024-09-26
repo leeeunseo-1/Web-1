@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 스타일</title>
+    <style>
+        .basic {
+            background-color: gray;
+        }
+
+        h1 {
+            color: greenyellow;
+        }
+
+        .font_px {
+            font-size: 40px;
+        }
+
+        .font_em {
+            font-size: 1em;
+            /* 원래 폰트의 기본 사이즈는 16px이다.
+        em : 부모 요소의 폰트 크기를 기준으로 상대적인 크기를 지정한다.
+        예를 들어 부모 요소의 폰트가 16px이라면 자식 요소에게 1em이라고 지정하면 부모 요소를 따라 16px이 되고 2em이라고 지정하면 부모 요소의 폰트 2배인 32px로 나타난다. 
+        특징 : 부모 요소의 폰트 크기가 달라질 때마다 em으로 적용한 폰트의 사이즈도 달라짐
+        */
+    }
+ 
+        .font_rem {
+            font-size: 3rem;
+            /* 폰트 기본 사이즈의 3배이다.
+            em과 다르게 부모 요소와는 관계 없이 최상위 루트 요소인 HTML의 폰트 크기를 기준으로 상대적인 크기를 설정한다. 
+            */
+        }
+
+        .font_weight {
+            font-weight: 900;
+            /* 기본값은 400이며 900으로 하면 굵게 나타난다.
+            폰트마다 사용할 수 있는 weight 값이 정해져있기도 하다. */
+        }
+ </style>
+</head>
+
+<body class="basic">
+    <h1>폰트 스타일</h1>
+    <p class="font_px">PX 사이즈</p>
+    <p class="font_em">em 사이즈</p>
+
+    <p class="font_rem">rem 사이즈</p>
+    <p class="font_weight">폰트 굵기</p>
+</body>
+
+</html>

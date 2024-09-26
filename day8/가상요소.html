@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상요소</title>
+    <style>
+        .basic {
+            background-color: gray;
+        }
+
+        .box>p::before {
+            content: '오늘은 목요일!';
+            color: tomato;
+        }
+
+        /* content는 필수이다.
+           content 문법 : '' 컨텐츠는 따움표 안에 기입한다. */
+
+        .box>p::after {
+            content: '하지만 블렌더 보강입니다';
+            color: blueviolet;
+        }
+
+        .box::before {
+            width: 200px;
+            height: 200px;
+            background-color: yellowgreen;
+            border-radius: 50%;
+            display: block;
+            content: '';
+        }
+
+        .box::after {
+            width: 550px;
+            height: 5px;
+            content: '';
+            display: block;
+            background-color: black;
+        }
+        /* width, height, display, content 4개 모두 다 필수로 적어야 브라우저에 표시돼는 요소들이다. */
+    </style>
+</head>
+
+<body class="basic">
+    <div class="box">
+        <p>내일은 즐거운 휴일입니다.</p>
+    </div>
+</body>
+
+</html>
