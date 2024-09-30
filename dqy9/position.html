@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 300px;
+            border: 2px solid sandybrown;
+            margin-top: 50px;
+            /* position: relative; */
+            position: static; 
+            /*
+            relative는 속성 적용한 부모가 기준 
+            static = HTML 문서 자체가 기준이 됌, container의 크기 값에 맞추지 않음 */
+
+            /* 이 속성이 없으면 부모의 시작점으로 자식들이 겹쳐서 다 모임 */
+        }
+
+        .box {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        p {
+            z-index: 1;
+        }
+
+        .b1 {
+            background-color: violet;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* p와 z-index 속성을 이용해 순서를 변경하였음 */
+        }
+
+        .b2 {
+            background-color: seagreen;
+            top: 50%;
+            left: 50%;
+            /* 여기까지만 적으면 중앙 지점의 점이 박스의 시작(왼쪽윗점)이기 때문에 박스가 화면상 보기에 가운데가 아님, 시작점 값이 중앙일 뿐 */
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            /*
+            박스에 퍼센트를 부여하여 이동시킬 수 있음
+             X, Y 하나만 쓸 수 있음 
+             */
+            transform: translate(-50%, -50%);
+            /* 
+            X, Y 값을 한 번에 선언하여 적용함
+            숫자값+퍼센트(콤마, 띄워쓰기)숫자값+퍼센트
+            */
+        }
+
+        .b3 {
+            background-color: aqua;
+            bottom: 0;
+            right: 0;
+            /* 부모의 bottom, right으로부터 0의 위치 */
+        }
+
+        .top_btn {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: red;
+            color: azure;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body id="container">
+    <div class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam culpa sequi quam odit sit laboriosam earum blanditiis assumenda non quos quas, enim eum quidem rem debitis aut qui ab soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus sit incidunt ea est ullam adipisci obcaecati minus, ad placeat quos possimus blanditiis facilis, quibusdam reprehenderit qui cum accusantium autem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam culpa sequi quam odit sit laboriosam earum blanditiis assumenda non quos quas, enim eum quidem rem debitis aut qui ab soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus sit incidunt ea est ullam adipisci obcaecati minus, ad placeat quos possimus blanditiis facilis, quibusdam reprehenderit qui cum accusantium autem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam culpa sequi quam odit sit laboriosam earum blanditiis assumenda non quos quas, enim eum quidem rem debitis aut qui ab soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus sit incidunt ea est ullam adipisci obcaecati minus, ad placeat quos possimus blanditiis facilis, quibusdam reprehenderit qui cum accusantium autem.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam culpa sequi quam odit sit laboriosam earum blanditiis assumenda non quos quas, enim eum quidem rem debitis aut qui ab soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatibus sit incidunt ea est ullam adipisci obcaecati minus, ad placeat quos possimus blanditiis facilis, quibusdam reprehenderit qui cum accusantium autem.
+        </p>
+        <div class="box b1">왼쪽 위</div>
+        <div class="box b2">중간</div>
+        <div class="box b3">오른쪽 아래</div>
+    </div>
+    <div class="top_btn">
+        <a href="#container">TOP</a>
+        <!-- TOP 버튼을 클릭하여 위로 이동하는 하이퍼링크의 특징을 이용함
+            또한 이 버튼의 텍스트뿐 아니라 버튼의 어디 부분을 눌러도 작동할 수 있게 설정해주어야 접근성에 좋다.
+         -->
+    </div>
+</body>
+
+</html>
+
+<!-- position 속성의 absolute가 자식, relative가 부모의 관계를 갖는다. -->
