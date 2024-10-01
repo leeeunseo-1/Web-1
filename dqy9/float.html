@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        img {
+            width: 200px;
+            float: left;
+        }
+
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: powderblue;
+        }
+        .p {
+            clear: both;
+            /* 이 속성 이후부터는 float 속성에 관여받지 않음을 선언 */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="https://image-cdn.hypb.st/https%3A%2F%2Fkr.hypebeast.com%2Ffiles%2F2022%2F04%2Ftop-10-favorite-teachers-in-manga-anime-survey-results-ft.jpg?w=960&cbr=1&q=90&fit=max"
+            alt="캐릭터">
+    </div>
+    <p class="p">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto explicabo magnam voluptate, autem commodi sed
+        doloremque repellendus necessitatibus mollitia quae, nulla ducimus neque fugiat, magni vitae corporis
+        exercitationem laboriosam facilis?
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa suscipit architecto a possimus iste odio alias
+        tenetur dolorem inventore delectus. Quia obcaecati eum alias, esse a reprehenderit unde veritatis numquam?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, quis? Autem blanditiis dignissimos velit dolores
+        sequi maiores earum culpa ex quo pariatur inventore expedita excepturi, ipsam iure quos consectetur deleniti.
+    </p>
+</body>
+
+</html>
+
+<!-- 선택한 요소를 다른 요소 위에 떠다니게 한다.
+다른 요소를 침범하지는 않는다. 가리지 않는다. -->
+
+<!-- float 속성으로 레이아웃을 건드리면 그 이후의 요소들도 영향을 받을 수 있으며
+이러저리 이상하게 움직일 수 있기 때문에 예전에만 많이 쓰던 속성임 
+예전에 쓰던 레이아웃 구성 속성임
+지금의 flex 같은 역할이였다
+이렇게 있다 정도로만 알아두기-->

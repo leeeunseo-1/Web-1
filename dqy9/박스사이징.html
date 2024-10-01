@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 사이징</title>
+    <style>
+        .box_size {
+            width: 300px;
+            border: 30px solid salmon;
+            background-color: pink;
+            padding: 30px;
+            margin: 30px;
+            box-sizing: border-box; 
+            /* 박스 사이징 주석 처리 해보면 차이 볼 수 있음 */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_size">박스입니다</div>
+</body>
+
+</html>
+
+
+
+<!-- 박스 사이징의 기본값은 외부에 효과를 적용하는 것
+border-box :
+width 값이 컨텐츠, 패딩, 보더, 마진의 값을 모두 더한 값으로 계산함 (지정한 width 값의 안쪽으로 들어오게 함)
+컨텐츠 박스를 원하는 크기로 쉽고 정확하게 지정해주기 위함1-->
