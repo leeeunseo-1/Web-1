@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>웹 페이지 구현 첫 실습 24/12/02</title>
+        <style>
+            header {
+                background-color: #333;
+                color: #333;
+                padding: 10px;
+            }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                display: inline;
+                margin-right: 10px;
+            }
+
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            main {
+                margin: 20px;
+            }
+
+            section {
+                margin-bottom: 30px;
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #333;
+            }
+
+
+            form label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="submit"] {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            footer {
+                color: #fff;
+                background-color: #333;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Welcome to My Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>About Me</h2>
+                <article>
+                    <h3>introducation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dicta doloribus iste blanditiis
+                    </p>
+                </article>
+                <aside>
+                    <h2>Related Links</h2>
+                    <ul>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </aside>
+            </section>
+
+            <section>
+                <h2>Gellery</h2>
+                <figure>
+                    <img src="https://vmspace.com/ActiveFile/spacem.org/project/thum/%26%234355%3B%26%234450%3B%26%234361%3B%26%234469%3B%26%234535%3B%26%234357%3B%26%234469%3B%26%234364%3B%26%234462%3B%26%234368%3B%26%234450%3B%26%234520%3B-06.jpg"
+                         alt="처마 집의 외형 사진"
+                         width="400px">
+                    <figcaption>Image Caption</figcaption>
+                </figure>
+                <!-- 실패 [ 이미지 column 위치 오른쪽으로 조금 옮기기 ] -->
+            </section>
+
+            <section>
+                <h2>Contact ME</h2>
+                <form action="submit.php"
+                      method="post">
+                    <label for="name">name :</label>
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           required>
+
+                    <label for="emil">Email :</label>
+                    <input type="text"
+                           id="emil"
+                           name="emil"
+                           required>
+
+                    <input type="submit"
+                           value="Submit">
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>2023 My Website. All rights reserved.</p>
+        </footer>
+    </body>
+
+</html>
