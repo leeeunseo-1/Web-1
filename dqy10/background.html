@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background 단색/이미지/그라데이션</title>
+    <style>
+        .box_container>div {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+
+        }
+
+        .box1 {
+            background-color: thistle;
+            /* 색상명 직접 기입 */
+        }
+
+        .box2 {
+            background-color: #333;
+            /* # hex 값을 사용 */
+        }
+
+        .box3 {
+            background-color: rgb(171, 203, 248, 0.8);
+            /* RGB 컬러를 각각 배합하여 원하는 색상을 만듬 
+            그 후 4번째 값은 alpha = 투명도 (0~1) : 0에 가까울수록 투명해진다.*/
+        }
+
+        .img_container > div {
+            width: 200px;
+            height: 200px;
+            background-color: #222;
+            margin: 10px;
+            display: inline-block;
+            /* 블록에 inline-block 속성값을 넣음으로써 인라인의 특성도 갖을 수 있게 하였다.  */
+        }
+
+        .img1 {
+            background: url(./이미쥬ㅣ백그라운드쉴섭.jpg);
+            background-size: 150px 50px;
+            /* background 이미지를 원하는 대로 사이즈를 px로 조절.
+            하나의 값만 작성하면 가로값으로 적용되고 비율에 맞춰 이미지가 줄어든다.
+            두 개의 값을 적용하면 가로, 세로 순으로 값이 적용된다. */
+        }
+        .img2 {
+            background: url(./이미쥬ㅣ백그라운드쉴섭.jpg);
+            background-size: 70%;
+            /* 시작하는 첫 지점부터 몇 %의 영역을 가로값이 차지하게 할 것인지를 지정함
+            기본 px과 같이 가로와 세로의 2개 값 지정 가능
+             */
+             background-position: 15px 30px;
+             /* position : 이미지 위치 사이즈 지정해줌, 그 외 남은 공간에 대한 것은 백그라운드 사이즈속성에 따라 다름 */
+        }
+        .img3 {
+            background: url(./8e3353bb9aad0.jpg);
+            background-size: contain;
+            background-repeat: repeat-y;
+        
+            /* contain : 배경 이미지를 요소의 영역 내부에 잘리는 부분 없이 이미지의 모든 영역이 보여지는 속성 */
+            /* background-repeat 반복에 관한 속성 - 다양한 속성값이 있다. */
+        }
+        .img4 {
+            background: url(./8e3353bb9aad0.jpg)no-repeat;
+            /* img의 url()와 뒤와 ; 앞인 그 사이에 no-repeat 을 적으면 반복 없음이 바로 적용됀다. */
+            background-size: cover;
+            /* 이미지가 원본 비율을 유지하면서 요소를 모두 채우도록 이미지를 확대, 축소하여 맞춤 
+            짤리는 부분이 있다하더라도 (단점)
+            cover는 이미지의 원본 비율을 유지하면서, 요소의 어느 부분도 남게 하지 않는다 (장점)*/
+        }
+        .img5 {
+            background: url(./8e3353bb9aad0.jpg);
+            background-size: auto;
+            /* 기본값이다. 
+            원본 크기의 사진이 들어가있는 것이다.*/
+        }
+
+        .scroll_img_container {
+            height: 10000px;
+        }
+
+        .scroll_1 {
+            background: url(./이미쥬ㅣ백그라운드쉴섭.jpg);
+            width: 500px;
+            height: 1000px;
+            background-size: cover;
+            background-attachment: scroll;
+            margin: 50px;
+        }
+
+        .scroll_2 {
+            background: url(./이미쥬ㅣ백그라운드쉴섭.jpg);
+            width: 500px;
+            height: 1000px;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <!-- div.box_container 라고 쳐서 만듬 -->
+
+    <div class="img_container">
+        <div class="img1">img1</div>
+        <div class="img2">img2</div>
+        <div class="img3">img3</div>
+        <div class="img4">img4</div>
+        <div class="img5">img5</div>
+    </div>
+    <!-- 이미지 주소 복사 X, 이미지를 다른 이름으로 저장 O
+    후에 다운로드 기록의 현재 폴더에 드래그 드롭하여 불러옴
+ 
+이미지를 img 태그로 불러오면 그것은 그냥 이미지를 불러온 것이다
+background 태그를 사용하여 이미지를 컨텐츠화시키고 배경 이미지로 넣은 것은 다른 설정이다. -->
+        <div class="scroll_img_container">
+            <div class="scroll_1"></div>
+            <div class="scroll_2"></div>
+        </div>
+</body>
+
+</html>

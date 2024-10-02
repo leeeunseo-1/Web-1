@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .z_index {
+            position: relative;
+            border: 1px solid darkblue;
+            height: 500px;
+        }
+
+        .z_index > div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            text-align: center;
+            line-height: 100px;
+            border: 1px solid red;
+        }
+
+        .box1 {
+            background-color: yellow;
+            z-index: -1;
+        }
+
+        .box2 {
+            background-color: aqua;
+            top: 25px;
+            left: 25px;
+            z-index: -2;
+        }
+
+        .box3 {
+            background-color: blueviolet;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="z_index">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+
+</html>
+
+<!-- 부모 요소에 잘 들어가있는지 확인해야 함. 부모 계층이 낮으면 자식 계층이 높아도 올라가지 못한다. 
+일단 기본적으로 처음에는 box3 이 가장 최근의 코드이기 때문에 가장 위에 쌓여 있는 상태이다. 당연한 순리임
+여기서 순서를 바꿔주는 속성을 사용하여 순서를 지정해준 것이다.
+z-index의 숫자가 클수록 위에 있는다. 절대적인 순서를 지정해주고 싶으면 매우 큰 값을 대입하여 확실하게 해준다. 999
+z-index를 먹이려면 꼭 자식이 position: absolute; 가 있어야만 작동한다.
+-->

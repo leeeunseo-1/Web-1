@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position 2 (sticky)</title>
+    <style>
+        .sticky_section {
+        height: 10000px;
+        }
+
+        /* body { */
+            /* height: 10000px; */
+            /* 원하는 부분까지만 sticky 효과를 넣고 싶을 때 섹션을 나누고 따로 효과를 줌
+            body에 넣으니까 스티키 따라오다가 말음 */
+        /* } */
+
+        .sticky_box {
+            width: 100%;
+            height: 100px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            background-color: aquamarine;
+            /* 스크롤을 하다가 sticky영역을 지나고 나면 fixed 처럼 위에 고정된 채로 있는다. */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="sticky_section">
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+        </div>
+        <div class="sticky_box"></div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. At nisi obcaecati, alias, dolores sapiente
+                atque fugiat modi animi numquam voluptate iusto deleniti blanditiis quod suscipit dignissimos beatae
+                ipsum officia aperiam.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>
