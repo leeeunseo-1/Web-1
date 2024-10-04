@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex1</title>
+    <!-- 현재 웹 개발에서 매우 중요한 부분이다 -->
+    <!-- container와 items가 있으며 container에 display 속성과 flex 속성값을 넣는다 -->
+    <style>
+        .flex_container {
+            display: flex;
+            height: 300px0;
+            /* 개발자 도구로 확인한 결과 : 컨테이너는 블록, 아이템은 인라인의 영역값을 갖는 것처럼 보인다. */
+            flex-direction: column;
+            /* row, column, row-reverse, column-reverse */
+        }
+
+        .flex_container2 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .item {
+            width: 300px;
+            border: 1px solid #333;
+            text-align: center;
+            line-height: 300px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="flex_container1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+
+    <section class="flex_container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+
+    <a href="https://studiomeal.com/archives/197" target="_blank" style="font-size: 50px; text-decoration: none;">1분 코딩
+        -
+        flex에 대한 이해</a>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTK-BoI5pWAyvJNliwbGSBqjHjyFJF9wWl0g&s"
+        alt="flex 설명 사진 1" style="width: 500px;">
+
+    <img src="https://miro.medium.com/v2/resize:fit:1400/0*YeaUsQyhXSL1TCTH.png" alt="flex 설명 사진 2"
+        style="width: 500px;">
+
+</body>
+
+</html>

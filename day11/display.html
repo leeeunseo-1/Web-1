@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <!--  display 속성 : 요소들을 어떻게 보여줄지 결정 -->
+    <style>
+        .none {
+            display: none;
+            /* 화면에서 요소를 없앰, 요소의 영역도 사라진다 */
+        }
+
+        .block_1 {
+            display: block;
+            /* 인라인 박스를 블록 요소처럼 변환시켜줄 수 있다 
+            블록 요소이기 때문에 크기를 조정할 수 있다 (아래의 예시)*/
+        }
+
+        .block_2 {
+            display: block;
+            width: 500px;
+            height: 300px;
+        }
+
+        .inline_1 {
+            display: inline;
+        }
+
+        .inline_1 {
+            display: inline-block;
+        }
+
+        .inline_2 {
+            display: inline;
+            width: 300px;
+            height: 300px;
+            /* 인라인 요소이기 때문에 크기, 영역 조절 불가 */
+        }
+
+        .inline_block_2 {
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+        }
+        /* 인라인처럼 요소만큼의 크기를 갖음(인라인 특성) + 크기 조절 가능(블록 특성) */
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="none">none
+            <span class="block_1">inline 속성의 태그에 block을 부여하면?</span>
+            <span class="block_2">inline 속성의 태그에 block을 부여하고 width/height 값을 부여함</span>
+        </div>
+
+        <div class="inline_1"> block속성 태그에 inline 속성을 부여하면?</div>
+        <span class="inline_2">inline 태그에 크기를 지정해볼까?</span>
+
+        <div class="inline_block_1">인라인 블록이란?</div>
+        <span class="inline_block_2">인라인 태그에 inline-block 속성을 부여한 후 크기를 조절하면?</span>
+    </div>
+
+</body>
+
+</html>
