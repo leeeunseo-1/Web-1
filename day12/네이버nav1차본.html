@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0">
+        <title>네이버-nav-실습</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                /* nav 외의 다른 레이아웃 구조들을 아래로 쌓듯이 정렬하기 위한 것 (안 정렬해도 되는건진 모르겠음) */
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                /* background-color: powderblue; */
+                width: 100%;
+                height: 160px;
+            }
+
+            .search_bar {
+                display: flex;
+                justify-content: center;
+                /* flex-direction이 row이므로 justify-content를 사용
+                가로 뱡향에서의 중앙으로 이동 시킴 */
+                /* background-color: aqua; */
+            }
+
+            .search_button {
+                padding: 10px 470px;
+                background-color: gray;
+                color: aliceblue;
+                border: none;
+                border-radius: 25px;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .menu_bar {
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+                gap: 20px;
+                /* background-color: blueviolet; */
+            }
+
+            .menu_box_and_text {
+                text-decoration: none;
+                color: #333;
+            }
+
+            .menu_box {
+                background-color: gray;
+                width: 80px;
+                height: 80px;
+                border-radius: 20px;
+            }
+
+            .menu_text {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <div class="search_bar">
+                <a href="#"
+                   class="search_button">
+                    검색
+                </a>
+            </div>
+            <div class="menu_bar">
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+                <a href="#" class="menu_box_and_text">
+                    <div class="menu_box">
+                    </div>
+                    <div class="menu_text">
+                        메뉴
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </body>
+
+</html>
