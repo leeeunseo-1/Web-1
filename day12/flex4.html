@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content</title>
+    <!-- 부모 요소의 공간을 어떻게 활용해서 자식들을 배치할 것인가에 대한 속성
+        기본값은 중심값이 가로 / 가장 많이 사용하는 속성
+         -->
+</head>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+            margin: 10px;
+        }
+
+        article {
+            border: 1px solid #333;
+            margin: 10px;
+            /* height: 800px; */
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+        }
+
+        .start {
+            justify-content: flex-start;
+        }
+
+        .end {
+            justify-content: flex-end;
+            /* 매우 많이 쓰는 값 */
+        }
+
+        .center {
+            justify-content: center;
+            /* 매우 많이 쓰는 값 */
+        }
+
+        .between {
+            justify-content: space-between;
+            /*
+            요소 간의 간격을 동일하게 갖음 => 양 쪽에는 여백을 주지 않는다 
+            부모 요소의 벽에 딱 붙는다 
+            매우 많이 쓰는 값 / 
+            */
+        }
+
+        .around {
+            justify-content: space-around;
+            /*
+            부모 영역에서 자식들의 양 옆(주변:around)에 같은 값의 여백을 갖음
+            */
+        }
+
+        .evenly {
+            justify-content: space-evenly;
+            /*
+            아이템들과 양 끝에 균일한 간격을 가진다
+            */
+        
+        }
+    </style>
+<body>
+    <section class="justify_content">
+        <article class="start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="evenly">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+    </section>
+</body>
+
+</html>

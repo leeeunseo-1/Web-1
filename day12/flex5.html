@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align_items</title>
+    <!--  -->
+    <style>
+        article {
+            height: 800px;
+            display: flex;
+            border: 1px solid #333;
+            margin: 10px;
+        }
+
+        div {
+            background-color: yellowgreen;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .flex_start {
+            align-items: flex-start;
+        }
+
+        .flex_end {
+            align-items: flex-end;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .baseline {
+            align-items: baseline;
+            /* 이것만 넣었을 때엔 여기서 기본과 변화 없음
+            가로, 높이 값이 아닌 순수 컨텐츠의 위치와 크기를 봄*/
+        }
+
+        .baseline_text {
+            font-size: 100px;
+            width: 500px;
+            height: 500px;
+            /*
+            baseline 속성값의 변화도를 보기 위한 코드
+            각각의 컨텐츠의 밑에 라인이 baseline이 됌
+            텍스트끼리 밑에 선이 일자가 됌
+            */
+        }
+
+        .baseline_text + div {
+            font-size: 150px;
+            /* 3을 선택하기 위한 인접 형제 선택자 */
+        }
+
+        .stretch {
+            align-items: stretch;
+            /* baseline과 마찬가지로 이것만 넣었을 땐 여기서 큰 변화 없어보임 */
+        }
+
+        .stretch > div {
+            width: auto;
+            height: auto;
+            /*
+            baseline 속성값의 변화도를 보기 위한 코드
+            부모 요소의 크기만큼 자식 요소들이 쫙쫙 스트레칭 돼는 것
+            가로, 높이 등 auto 값을 넣은 부분은 길이를 꽉 채운다
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <section class="align_items_container">
+        <article class="flex_start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="flex_end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+        <article class="baseline">
+            <div>1</div>
+            <div class="baseline_text">2</div>
+            <div>3</div>
+        </article>
+        <article class="stretch">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </article>
+    </section>
+</body>
+
+</html>

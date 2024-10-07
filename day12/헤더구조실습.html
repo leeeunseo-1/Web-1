@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빙그레 웹사이트 - 헤더 구조 실습</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: wheat;
+        align-items: center;
+        color: aliceblue;
+        padding: 0 16px;
+        height: 100px;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: 900;
+        margin-left: 16px;
+        /* 왼쪽 벽에 붙는 요소이기 때문이다 */
+    }
+
+    .header_menu {
+        display: flex;
+    }
+
+    .header_menu > li {
+        list-style: none;
+        /* 리스트의 불릿 없앰 */
+        margin: 0 16px;
+        /* li 태그의 양 옆에 마진을 줘서 겹치지 않고 존재하게 함. a태그에 넣는 것은 이상하다. 링크에 마진을 넣는 것이 아닌 링크가 들어간 텍스트 박스에 마진을 넣기 위함이기 때문이다. */
+    }
+
+    .header_menu > li > a {
+        text-decoration: none;
+        /* 링크 태그의 파란색 글자를 수정함. 직접 대입해줘야 작동함 */
+        color: aliceblue;
+    }
+
+    .sign_zone {
+        display: flex;
+        /* button이 아닌 button을 감싸고 있는 div에 flex를 넣었다 */
+    }
+
+    .sign_zone > div > button {
+        padding: 16px;
+        background-color: burlywood;
+        border: none;
+        border-radius: 25px;
+        margin-right: 10px;
+        /* 오른쪽 벽에 붙는 요소이기 때문이다 */
+    }
+
+    .sign_zone > div > button > a {
+        text-decoration: none;
+        color: aliceblue;
+        padding: 16px;
+        /* a태그의 영역을 버튼의 패딩만큼 키워서 선택이 쉽도록 함 */
+    }
+
+    .sign_zone > div > button:hover {
+        background-color: rgb(100, 100, 233);
+        transition: 0.3s;
+        /* hover 이펙트 대입 */
+    }
+
+    .sign_zone > div > button > a:hover {
+        color: rgb(161, 211, 255);
+        transition: 0.3s;
+        /* button뿐 아니라 텍스트(a 태그의 컨텐츠)도 수정해줄 때 */
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">
+            LOGO
+
+        </div>
+        <div>
+            <ul class="header_menu">
+                <li>
+                    <a href="#">ABOUT</a>
+                </li>
+                <li>
+                    <a href="#">MENU</a>
+                </li>
+                <li>
+                    <a href="#">PORTPOLIO</a>
+                </li>
+                <li>
+                    <a href="#">CONTECT</a>
+                </li>
+            </ul>
+        </div>
+        <div class="sign_zone">
+            <div>
+                <!-- button이 인라인 태그라서 div로 감쌌다. -->
+                <button>
+                    <a href="#">로그인</a>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <a href="#">회원가입</a>
+                </button>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
