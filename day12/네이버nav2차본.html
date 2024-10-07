@@ -45,7 +45,7 @@
                 border-radius: 20px;
                 padding: 10px;
                 display: none;
-                /* 검색 기능을 위해 넣었으나 어떻게 사용해야 할지 모르겠음, 일단 가린 상태 */
+                /* 검색 기능을 위해 넣었으나, 일단 가린 상태 */
             }
 
             .search_button {
@@ -70,12 +70,26 @@
                 justify-content: center;
                 margin-top: 10px;
                 gap: 20px;
+                flex-wrap: wrap;
                 /* background-color: rgba(127, 255, 212, 0.558); */
             }
+
+            @media screen and (max-width: 500px){
+                .menu_box_and_text:nth-child(n+5)
+                   {
+                    display: none;
+                   }
+                }           
+                /* 더보기 점 3개 표시하는 법 모르겠음 */
 
             .menu_box_and_text {
                 text-decoration: none;
                 color: #333;
+            }
+
+            .menu_box_and_text:hover .menu_box {
+                background-color: rgb(99, 99, 99);
+                transition: 0.2s;
             }
 
             .menu_box {
@@ -100,70 +114,80 @@
                 <button class="search_button">검색</button>
             </div>
             <div class="menu_bar">
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
                         메뉴
                     </div>
                 </a>
-                <a href="#" class="menu_box_and_text">
+                <a href="#"
+                   class="menu_box_and_text">
                     <div class="menu_box">
                     </div>
                     <div class="menu_text">
