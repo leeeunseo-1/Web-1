@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브댓글구조</title>
+    <script src="https://kit.fontawesome.com/0ae032f493.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mention {
+            border: 1px solid black;
+            height: 200px;
+            display: flex;
+            width: 1000px;
+        }
+
+        .profile {
+            width: 70px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+        }
+s
+        .like_unlike_reply {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .reply {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mention">
+        <div class="profile"></div>
+        <div class="text">
+            <p class="id">ID</p>
+            <p>Mention</p>
+            <div class="like_unlike_reply">
+                <i class="fa-regular fa-thumbs-up">6.8천</i>
+                <i class="fa-regular fa-thumbs-down"></i>
+                <p class="reply">답글</p>
+            </div>
+            <div class="like_unlike_reply">
+                <i class="fa-solid fa-chevron-down"></i>
+                <p>답글 n개</p>
+            </div>
+        </div>
+        <div class="view_more">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </div>
+</body>
+
+</html>

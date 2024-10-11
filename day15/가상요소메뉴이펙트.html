@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 메뉴 이펙트</title>
+    <style>
+        body {
+            background-color: powderblue;
+        }
+
+        .menu_hover_effect > ul {
+            display: flex;
+        }
+
+        .menu_hover_effect > ul > li {
+            list-style: none;
+            margin: 16px;
+        }
+
+        .menu_hover_effect > ul > li > a {
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 24px;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .menu_hover_effect a::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .menu_hover_effect a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 0;
+            background-color: aliceblue;
+            transition: 0.3s;
+        }
+
+        .menu_hover_effect a:hover::before {
+            top: 100%;
+        }
+
+        .menu_hover_effect a:hover::after {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu_hover_effect">
+        <ul>
+            <li>
+                <a href="#">HTML</a>
+            </li>
+            <li>
+                <a href="#">CSS</a>
+            </li>
+            <li>
+                <a href="#">JAVA SCRIPT</a>
+            </li>
+            <li>
+                <a href="#">UX/UI</a>
+            </li>
+            <li>
+                <a href="#">PORTFOLIO</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

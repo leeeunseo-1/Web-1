@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 정답</title>
+    <script src="https://kit.fontawesome.com/0ae032f493.js" crossorigin="anonymous"></script>
+    <style>
+        .comment_container {
+            display: flex;
+            justify-content: space-between;
+            margin: 16px;
+            max-width: 1200px;
+        }
+
+        figure {
+            background-image: url(./댓글실습.png);
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            background-size: cover;
+        }
+
+        figure > a {
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+
+        .user_comment {
+            flex-basis: 93%;
+        }
+
+        .user_name,
+        .comment_content {
+            font-size: 14px;    
+        }
+
+        .icon_box {
+            align-items: center;
+            display: flex;
+        }
+
+        .icon_box > div {
+            margin-right: 20px;
+        }
+
+        .recomment {
+            color: #065fd4;
+            width: 100px;
+            height: 70px;
+            line-height: 70px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="comment_container">
+        <figure>
+            <a href="#"></a>
+        </figure>
+        <div class="user_comment">
+            <h2 class="user_name">User Name</h2>
+            <p class="comment_content">Coment Content</p>
+            <div class="icon_box">
+                <div>
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    <span>6.8천</span>
+                </div>
+                <div>
+                    <i class="fa-regular fa-thumbs-down"></i>
+                </div>
+            </div>
+            <div class="recomment">
+                <i class="fa-solid fa-chevron-down"></i>
+                <span>reply</span>
+            </div>
+        </div>
+        <div>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+    </div>
+</body>
+
+</html>
